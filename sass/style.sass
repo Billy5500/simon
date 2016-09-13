@@ -1,0 +1,363 @@
+@import 'https://fonts.googleapis.com/css?family=Exo|Orbitron|Suez+One'
+
+$greenBtnColor: #2E7D32
+$redBtnColor: #a20025
+$blueBtnColor: #0D47A1
+$yellowBtnColor: #F9A825
+$greenBtnColorActive: #43A047
+$redBtnColorActive: #e53935
+$blueBtnColorActive: #1976D2
+$yellowBtnColorActive: #FFEB3B
+$mainFont: 'Suez One', serif
+$mainColor: #222
+$numbersFont: 'Exo', sans-serif
+$labelsFont: 'Orbitron', sans-serif
+$numbersColorOn: #951c1c
+$numbersColorOff: #311
+$settingsPanelColor: #616161
+
+=noselect
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+html, body
+	height: 96%
+
+body
+	background: url(http://i.share.pho.to/f65164fb_o.png)
+	text-align: center
+
+#game
+	position: absolute
+	box-shadow: 0px -2px 20px #222
+	height: 300px
+	width: 300px
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: #222
+	border-radius: 50%
+
+.big-ass-button
+	position: absolute
+	width: 45%
+	height: 45%
+
+#green-button-div
+	background: transparent
+	top: 4%
+	left: 4%
+	
+#green-button
+	width: 100%
+	height: 100%
+	background: $greenBtnColor
+	border-radius: 100% 0px 0px 0px
+	box-shadow: -2px -2px 5px #111
+	&:hover
+		cursor: pointer
+
+.green-button-highlighted
+	background: $greenBtnColorActive !important
+
+#green-button-blank-space
+	position: absolute
+	right: 0
+	bottom: 0
+	background: $mainColor
+	width: 60%
+	height: 60%
+	border-radius: 100% 0px 0px 0px
+	box-shadow: 0px 0px 5px $mainColor
+
+#red-button-div
+	background: transparent
+	top: 4%
+	right: 4%
+
+#red-button
+	background: $redBtnColor
+	width: 100%
+	height: 100%
+	border-radius: 0px 100% 0px 0px
+	box-shadow: 2px -2px 5px #111
+	&:hover
+		cursor: pointer
+
+.red-button-highlighted
+	background: $redBtnColorActive !important
+	
+
+#red-button-blank-space
+	position: absolute
+	left: 0
+	bottom: 0
+	background: $mainColor
+	width: 60%
+	height: 60%
+	border-radius: 0px 100% 0px 0px
+	box-shadow: 0px 0px 5px $mainColor
+
+#blue-button-div
+	background: transparent
+	bottom: 4%
+	right: 4%
+
+#blue-button
+	background: $blueBtnColor
+	width: 100%
+	height: 100%
+	border-radius: 0px 0px 100% 0px
+	box-shadow: 2px 2px 5px #111
+	&:hover
+		cursor: pointer
+
+.blue-button-highlighted
+	background: $blueBtnColorActive !important
+
+#blue-button-blank-space
+	position: absolute
+	left: 0
+	top: 0
+	background: $mainColor
+	width: 60%
+	height: 60%
+	border-radius: 0px 0px 100% 0px
+	box-shadow: 0px 0px 5px $mainColor
+
+#yellow-button-div
+	background: transparent
+	bottom: 4%
+	left: 4%
+
+#yellow-button
+	background: $yellowBtnColor
+	width: 100%
+	height: 100%
+	border-radius: 0px 0px 0px 100%
+	box-shadow: -2px 2px 5px #111
+	&:hover
+		cursor: pointer
+
+.yellow-button-highlighted
+	background: $yellowBtnColorActive !important
+
+#yellow-button-blank-space
+	position: absolute
+	right: 0
+	top: 0
+	background: $mainColor
+	width: 60%
+	height: 60%
+	border-radius: 0px 0px 0px 100%
+	box-shadow: 0px 0px 5px $mainColor
+
+#settings-panel
+	text-align: center
+	width: 50%
+	height: 50%
+	background: #616161
+	border-radius: 50%
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	box-shadow: 0px 0px 5px #111
+	#simon
+		+noselect
+		cursor: default
+		font-family: $mainFont
+		font-size: 1.5em
+		display: inline-block
+		margin-top: 10px
+	button
+		&:focus
+			outline: none
+		width: 15%
+		height: 15%
+		border: none
+		border-radius: 50%
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+		border: 2px solid $mainColor
+		cursor: pointer
+	
+	
+#counter
+	+noselect
+	cursor: default
+	background: #111
+	width: 20%
+	height: 16%
+	display: inline-block
+	position: absolute
+	top: 42%
+	left: 10%
+	border-radius: 3px
+	font-family: $numbersFont
+	font-size: 1.3rem
+	color: $numbersColorOff
+	line-height: 1.3em
+
+.active-counter
+	color: $numbersColorOn !important
+
+#start-reset
+	left: 0
+	right: 0
+	background: #b71c1c
+	
+#strict-mode
+	left: 69%
+	background: #F57F17
+
+.strict-active
+	background: #FDD835 !important
+
+#start-reset-label
+	+noselect
+	cursor: default
+	font-family: $labelsFont
+	text-transform: uppercase
+	font-size: 0.5em
+	display: inline-block
+	position: absolute
+	top: 28%
+	left: 2%
+	right: 0
+	width: 25%
+	height: 10%
+	margin-top: 31%
+	margin-left: 35%
+	
+
+#strict-mode-label
+	+noselect
+	cursor: default
+	font-family: $labelsFont
+	text-transform: uppercase
+	font-size: 0.5em
+	display: inline-block
+	position: absolute
+	top: 59%
+	right: 11%
+	width: 25%
+	height: 10%
+
+#counter-label
+	+noselect
+	cursor: default
+	font-family: $labelsFont
+	font-size: 0.5em
+	display: inline-block
+	position: absolute
+	text-transform: uppercase
+	top: 59%
+	left: 8%
+	width: 25%
+	height: 10%
+
+#on-off-switch
+	width: 20%
+	height: 8%
+	background: black
+	position: absolute
+	display: block
+	top: 82%
+	left: 0
+	right: 0
+	margin: auto
+
+.switch
+	background: transparent
+	height: 80%
+	width: 40%
+	position: relative
+	top: 10%
+	cursor: pointer
+
+.active
+	background: #647687
+	cursor: default
+
+#switch-is-off
+	position: absolute
+	left: 5%
+
+#switch-is-on
+	position: absolute
+	right: 6%
+
+.on-off-labels
+	+noselect
+	cursor: default
+	font-family: $labelsFont
+	font-size: 0.5em
+	text-transform: uppercase
+	top: 83%
+	display: inline-block
+	position: absolute
+	margin: auto
+
+#off-label
+	left: 25%
+
+#on-label
+	right: 28%
+	
+
+@media screen and (max-width: 320px)
+	body
+		width: 319px
+	
+@media screen and (min-height: 600px) and (min-width: 800px)
+	#game
+		width: 500px
+		height: 500px
+		#simon
+			font-size: 2.2em
+			margin-top: 20px
+	
+	#counter
+		font-size: 2em
+	
+	#settings-panel
+		button
+			width: 12%
+			height: 12%
+	
+	#start-reset-label, #strict-mode-label, #counter-label
+		font-size: 0.9em
+	
+	.on-off-labels
+		font-size: 0.7em
+		top: 83%
+	
+	#off-label
+		left: 27%
+	
+	#on-label
+		right: 30%
+	
+@media screen and (min-height: 700px) and (min-width: 900px)
+	width: 700px
+	height: 700px
+
+@media screen and (min-height: 900px) and (min-width: 1000px)
+	width: 800px
+	height: 800px
